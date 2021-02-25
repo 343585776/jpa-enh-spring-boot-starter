@@ -12,7 +12,7 @@
 
     <groupId>me.sdevil507</groupId>
     <artifactId>jpa-enh-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>jpa-enh-spring-boot-starter</name>
     <description>[jpa增强能力]自定义场景启动器</description>

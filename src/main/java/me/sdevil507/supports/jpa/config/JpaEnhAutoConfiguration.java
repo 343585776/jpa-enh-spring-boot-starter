@@ -1,6 +1,10 @@
 package me.sdevil507.supports.jpa.config;
 
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import javax.persistence.EntityManager;
 
 /**
  * jpa增强场景启动器自动发现配置
@@ -10,5 +14,16 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class JpaEnhAutoConfiguration {
+
+    /**
+     * 启用queryDsl能力
+     *
+     * @param entityManager entityManager
+     * @return JPAQueryFactory
+     */
+    @Bean(name = "jpaQueryFactory")
+    public JPAQueryFactory jpaQuery(EntityManager entityManager) {
+        return new JPAQueryFactory(entityManager);
+    }
 
 }
