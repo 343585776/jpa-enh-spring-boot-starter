@@ -12,7 +12,7 @@
 
     <groupId>me.sdevil507</groupId>
     <artifactId>jpa-enh-spring-boot-starter</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 
     <name>jpa-enh-spring-boot-starter</name>
     <description>[jpa增强能力]自定义场景启动器</description>
@@ -56,6 +56,16 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javassist</artifactId>
+                    <groupId>org.javassist</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- lombok支持 -->
